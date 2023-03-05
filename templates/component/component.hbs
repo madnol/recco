@@ -1,0 +1,19 @@
+import { FunctionComponent } from 'react';
+import classnames from 'classnames';
+import './{{kebabCase component_name}}.styles.scss';
+
+export interface Props {
+className?: string;
+}
+
+const {{pascalCase component_name}}: FunctionComponent<Props> = (props) => {
+    const {classnames, ...otherProps} = props
+    return (
+    <div className={classnames("{{kebabCase component_name}}", className)} {...otherProps}>
+        {/* Some content Here */}
+    </div>
+    )
+}
+
+{{pascalCase component_name}}.displayName = '{{pascalCase component_name}}';
+export default {{pascalCase component_name}};
